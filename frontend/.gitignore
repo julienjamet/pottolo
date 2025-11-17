@@ -7,3 +7,7 @@ dist/
 
 # .ENV FILES
 .env
+
+# CSS FILES
+*.css
+*.css.map
