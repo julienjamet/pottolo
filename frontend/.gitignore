@@ -1,0 +1,9 @@
+# NODE MODULES
+node_modules/
+
+# BUILD FOLDER / BUILD INFO
+dist/
+*.tsbuildinfo
+
+# .ENV FILES
+.env
