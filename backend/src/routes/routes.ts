@@ -25,5 +25,26 @@ export default (app: Application): void => {
 
             .catch((error: Error): Response => res.status(500).send(error));
     });
+
+
+    /**
+     * GET PRODUCT
+    **/
+    app.get('/products/:id', (req: Request, res: Response): void => {
+        const id: string = req.params.id;
+
+        Products.findById(id)
+
+            .then((product: Product | null): Response => {
+                if (product) {
+                    return res.status(200).send(product);
+                }
+                else {
+                    return res.status(404).send('Product not found');
+                }
+            })
+
+            .catch((error: Error): Response => res.status(500).send(error));
+    });
 };
 /************************************************************************/
