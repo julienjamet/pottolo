@@ -1,4 +1,94 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+
+    .banner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 30vh;
+        background-color: #e6dac9;
+        padding-top: 10px;
+
+        h1 {
+            font-size: 1.2rem;
+            color: #7e4141;
+            letter-spacing: 0.25rem;
+            margin: 30px 0 20px 0;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 50%;
+
+            a {
+                color: #7e4141;
+                text-decoration: none;
+
+                &:hover, &.active {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .mini-cart, .expanded-cart {
+        position: absolute;
+        top: 25vh;
+        right: 3rem;
+        cursor: pointer;
+    }
+
+    .mini-cart {
+        .fa-basket-shopping {
+            font-size: 1.5rem;
+        }
+
+        .cartBadge {
+            position: absolute;
+            top: 12px;
+            right: -12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 18px;
+            min-height: 18px;
+            font-weight: bold;
+            color: white;
+            font-size: 12px;
+            background: #e63946;
+            padding: 1px;
+            border-radius: 50%;
+        }
+    }
+
+    .expanded-cart {
+        top: 15vh;
+        right: 1rem;
+        text-align: center;
+        background-color: white;
+        padding: 0 1rem;
+        border-radius: 1rem;
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            button {
+                color: red;
+                background: transparent;
+                border: none;
+                margin-left: 8px;
+                cursor: pointer;
+            }
+        }
+
+        p {
+            font-weight: bold;
+        }
+    }
 }
