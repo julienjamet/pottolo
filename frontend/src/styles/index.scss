@@ -222,6 +222,86 @@ body {
             margin-left: 3vw;
         }
 
+        .productDetail {
+            display: flex;
+            align-items: center;
+            margin: 5vh 0 20vh 0;
+
+            .productImage, .productDescription {
+                flex: 1;
+                display: flex;
+                justify-content: flex-end;
+                
+                img {
+                    border-radius: 1rem;
+                }
+            }
+
+            .productDescription {
+                justify-content: flex-start;
+                flex-direction: column;
+
+                h2 {
+                    margin: 0 0 0 3vw;
+                }
+    
+                div {
+                    text-align: left;
+                    margin-left: 3vw;
+
+                    &.no-stock {
+                        font-weight: bold;
+                        color: red;
+                        margin: 1rem 0 1rem 3vw;
+                    }
+
+                    &.quantity {
+                        margin: 1rem 0 1rem 3vw;
+
+                        &.addToCart {
+                            width: 150px;
+                            font-weight: bold;
+                            color: white;
+                            text-align: center;
+                            padding: 0.5rem 0.25rem;
+                            background-color: #7e4141;
+                            border-radius: 1rem;
+                            cursor: pointer;
+
+                            &:hover {
+                                background-color: #b1823c;
+                            }
+                        }
+                    }
+                }
+
+                .quantitySelector {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    width: 150px;
+                    padding: 0.5rem 0.25rem;
+                    border: 1px solid #b1823c;
+                    border-radius: 1rem;
+
+                    button {
+                        font-size: 1.2rem;
+                        background: none;
+                        border: none;
+                        cursor: pointer;
+
+                        &:hover {
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+                .caracteristics {
+                    margin: 1rem 0 1rem 3vw;
+                }
+            }
+        }
+
         .admin {
             display: flex;
             flex-direction: column;

@@ -16,6 +16,7 @@ import { ProductList } from './components/shop/ProductList';
 /****************************************************/
 
 /******************************************[ PAGES ]*/
+import { ProductDetail } from './pages/Product';
 import { Admin } from './pages/Admin';
 /****************************************************/
 /************************************************************************/
@@ -40,6 +41,11 @@ export const App: FC = (): ReactElement => {
                     <Route
                         path='/shop'
                         element={<ProductList />}
+                    />
+
+                    <Route
+                        path='/shop/:id'
+                        element={<ProductDetail />}
                     />
 
                     <Route
