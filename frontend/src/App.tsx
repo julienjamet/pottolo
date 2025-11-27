@@ -15,6 +15,7 @@ import { CategoryGrid } from './components/home/CategoryGrid';
 /****************************************************/
 
 /******************************************[ PAGES ]*/
+import { Admin } from './pages/Admin';
 /****************************************************/
 /************************************************************************/
 
@@ -33,6 +34,11 @@ export const App: FC = (): ReactElement => {
                     <Route
                         path='/home'
                         element={<CategoryGrid />}
+                    />
+
+                    <Route
+                        path='/admin'
+                        element={<Admin />}
                     />
 
                     <Route

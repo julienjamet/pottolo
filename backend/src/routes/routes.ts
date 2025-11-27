@@ -61,7 +61,7 @@ export default (app: Application): void => {
         const password: string = req.body.password;
 
         if (password !== process.env.POST_PRODUCT_PASSWORD) {
-            res.status(403).send('Forbidden');
+            res.status(401).send('Unauthorized');
 
             return;
         }
