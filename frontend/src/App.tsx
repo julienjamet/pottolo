@@ -12,6 +12,7 @@ import { CartProvider } from './context/CartContext';
 import { Banner } from './components/shared/Banner';
 import { MiniCart } from './components/shared/MiniCart';
 import { CategoryGrid } from './components/home/CategoryGrid';
+import { ProductList } from './components/shop/ProductList';
 /****************************************************/
 
 /******************************************[ PAGES ]*/
@@ -34,6 +35,11 @@ export const App: FC = (): ReactElement => {
                     <Route
                         path='/home'
                         element={<CategoryGrid />}
+                    />
+
+                    <Route
+                        path='/shop'
+                        element={<ProductList />}
                     />
 
                     <Route
