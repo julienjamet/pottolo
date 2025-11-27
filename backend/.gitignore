@@ -1,6 +1,9 @@
 # NODE MODULES
 node_modules/
 
+# FILES FOLDER
+files/
+
 # BUILD FOLDER
 dist/
 
