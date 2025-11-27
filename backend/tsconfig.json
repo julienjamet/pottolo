@@ -1,27 +1,27 @@
 {
     "compilerOptions": {
-        // -- to enable modern JavaScript output
-        "target": "ES2022",
-        // -- to include ES2022 built-ins
+        "target": "ES2022", // OK, tu veux du moderne
         "lib": [
-            "ES2022"
-        ],
-        // -- to use ECMAScript module syntax ( import / export )
-        "module": "NodeNext",
-        // -- to enable all strict type-checking options
+            "ES2022",
+            "DOM"
+        ], // Ajoute "DOM" si tu utilises console, setTimeout, etc. (optionnel backend)
+        "module": "NodeNext", // OK pour Node ESM
+        "moduleResolution": "nodenext", // <-- IMPORTANT pour résoudre correctement les modules Node
         "strict": true,
-        // -- to check types in node_modules
-        "skipLibCheck": false,
-        // -- to forbid compilation if any TypeScript error is found
+        "skipLibCheck": true, // Mets true pour éviter les erreurs dans node_modules
         "noEmitOnError": true,
-        // -- destination of compiled JS files
         "outDir": "./dist",
-        // -- to use path aliases
+        "rootDir": "./src", // ajoute rootDir pour mieux organiser
+        "esModuleInterop": true, // IMPORTANT pour compatibilité imports commonjs
+        "forceConsistentCasingInFileNames": true,
         "paths": {
             "@/*": [
                 "./src/*"
             ]
-        }
+        },
+        "types": [
+            "node"
+        ] // <-- ajoute ça pour avoir les types Node globaux (Buffer, process, etc)
     },
     "include": [
         "src/**/*"
